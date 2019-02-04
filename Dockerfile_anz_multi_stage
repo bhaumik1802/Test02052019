@@ -1,0 +1,18 @@
+
+# Build Application 
+
+FROM golang:alpine AS build-env
+ENV GO111MODULE=on
+WORKDIR /app
+ADD ./ /app
+RUN apk update --no-cache
+RUN apk add git gcc musl-dev
+RUN cd /app && go build -o golang-test
+
+# Pack Application
+
+FROM alpine
+WORKDIR /app
+COPY --from=build-env  /app/golang-test /app/
+ENTRYPOINT ["/app/golang-test"]
+EXPOSE 8000
