@@ -7,7 +7,7 @@ from flask_restful import Resource, Api
 app = Flask(__name__)
 api = Api(app)
 
-books = [
+status = [
     {   "version": "1.0",
         "description" : "pre-interview technical test",
         "lastcommitsha": "abc57858585"
@@ -20,7 +20,7 @@ class Helloworld(Resource):
 
 class Healthcheck(Resource):
     def get(seff):
-        return jsonify(books)
+        return jsonify(status)
     
 
 api.add_resource(Helloworld, '/')
