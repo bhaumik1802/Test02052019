@@ -53,8 +53,23 @@ Docker Run :
 
 f3f7651123a21ceef2f6f2d62f08755f0a7f381b0a91d709cf6b004468446622
 
-Browser output:
+Endpoint Results:
 ================
+![root-endpoint](https://user-images.githubusercontent.com/46921595/52250787-90331c00-294d-11e9-9426-dcb5bdf6baa1.PNG)
+![healthcheck-endpoint](https://user-images.githubusercontent.com/46921595/52250803-a214bf00-294d-11e9-9cac-4f27790366f4.PNG)
 
+Gitlab CI integration with Github:
+==================================
 
+- I have imported the projct from github to gitlab and setup pipeline for test2.
+Gitlab URL : https://gitlab.com/bhaumik1802/anztest
+
+- .gitlab-ci.yml is defined to test and build the application.
+- once application build image it will be stored in Gitlapb registry.
+![gitlab-registry](https://user-images.githubusercontent.com/46921595/52250916-4ac31e80-294e-11e9-9422-4d44411f6a9f.PNG)
+
+Deployment:
+----------
+
+- Once we have applicatiton image, use ansible-playbook for deployments.
 
