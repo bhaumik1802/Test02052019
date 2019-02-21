@@ -19,7 +19,7 @@ class Helloworld(Resource):
         return 'Hello World'
 
 class Healthcheck(Resource):
-    def get(seff):
+    def get(self):
         return jsonify(status)
     
 
